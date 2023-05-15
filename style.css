@@ -2,23 +2,29 @@
   --primary-color: #5585b5;
   --secondary-color: #9fd3c7;
   --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-
 }
 
 body {
-  margin: 60px auto;
-  background-color: #ececec
+  /* margin: 60px auto; */
+  max-width: 100%;
+  background-color: #ececec;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+  margin: 0;
 }
 
 h1 {
-  font-size: 70px;
-  color: #142d4c;
+  font-size: 96px;
+  color: var(--primary-color);
+  opacity: 0.7;
 }
 
 h2 {
   font-size: 48px;
-  padding-top: 70px;
-  opacity: 0.7;
 }
 
 h3 {
@@ -26,9 +32,58 @@ h3 {
   opacity: 0.7;
 }
 
+contact-end {
+  text-align: center;
+  margin: 0;
+  font-size: 96px;
+}
+
 p {
+  background: var(--secondary-color);
+  padding: 10px;
+  border-radius: 4px;
   font-size: 18px;
   line-height: 1.5;
+  text-align: left;
+}
+
+@media (max-width: 576px) {
+  .responsive-h1 {
+    font-size: 42px;
+  }
+
+  .responsive-h2 {
+    font-size: 32px;
+    display: block;
+    text-align: center;
+  }
+
+  .responsive-h3 {
+    font-size: 24px;
+  }
+
+  .responsive-p {
+    text-align: center;
+  }
+
+  .responsive-button {
+    margin: 20px 70px;
+    border-radius: 4px;
+    padding: 10px 5px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 576px) {
+  .app-name {
+    text-align: left;
+  }
+}
+
+.nocolor-bg {
+  background: white;
 }
 
 .navigation-links {
@@ -49,9 +104,11 @@ p {
   background: var(--primary-color);
   box-shadow: var(--box-shadow);
   color: white;
+  text-align: center;
 }
 
-.primary-link {
+.launch-links {
+  /* margin: 5px; */
   border-radius: 4px;
   padding: 20px 15px;
   text-decoration: none;
@@ -64,6 +121,7 @@ p {
 .about-link {
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
+  text-align: center;
 }
 
 .homepage-link {
@@ -75,6 +133,7 @@ p {
 .about-paragraphs {
   display: flex;
   margin: 30px 0;
+  text-align: center;
 }
 
 .about-paragraphs p {
@@ -91,34 +150,4 @@ p {
 
 .email-link:hover {
   text-decoration: underline;
-}
-
-.font-color {
-  color: #9fd3c7;
-}
-
-.logo-color {
-  color: #142d4c;
-}
-
-@media (max-width: 576px) {
-  h1 {
-    font-size: 46px;
-    line-height: 1.5;
-  }
-
-  h2 {
-    font-size: 32px;
-    text-align: center;
-  }
-
-  p {
-    text-align: center;
-  }
-
-  .project-link {
-    display: block;
-    text-align: center;
-    margin: 0 20px;
-  }
 }
